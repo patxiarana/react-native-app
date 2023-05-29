@@ -11,9 +11,18 @@ const styles =   StyleSheet.create({
 const RepositoryStats = (props) => {
     return(
         <View style={{flexDirection:'row', justifyContent:'space-around'}}>
-        <StyledText>ReviewCount: {props.reviewCount}</StyledText>
-        <StyledText>Forkscount: {props.forkscount}</StyledText>
-        <StyledText>ReviewCount: {props.reviewCount}</StyledText>
+             <View>
+            <StyledText fontWeight='bold'>ReviewCount</StyledText>
+            <StyledText fontWeight='bold'>{props.reviewCount}</StyledText>
+            </View>
+            <View>
+            <StyledText fontWeight='bold'>Forks Counts</StyledText>
+            <StyledText>{props.forkscount}</StyledText>
+            </View>
+            <View>
+            <StyledText fontWeight='bold'>Rating Average</StyledText>
+            <StyledText>{props.ratingAverage}</StyledText>
+            </View>
         </View>
     )
 }

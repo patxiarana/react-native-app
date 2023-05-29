@@ -12,7 +12,7 @@
     main : 'System',
    },
    fontWeight: {
-    normal : '400' , 
+    normal :'400' , 
     bold : '700' ,
   }
 }
