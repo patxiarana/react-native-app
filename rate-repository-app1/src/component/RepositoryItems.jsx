@@ -7,22 +7,25 @@ const styles =   StyleSheet.create({
         paddingBottom:5,
          paddingTop:5
     },
-    strong : {
-        color : '#09f' , 
-        fontWeight: 'bold',
-        marginBottom: 5 , 
-    }
 })
+const RepositoryStats = (props) => {
+    return(
+        <View style={{flexDirection:'row', justifyContent:'space-around'}}>
+        <StyledText>ReviewCount: {props.reviewCount}</StyledText>
+        <StyledText>Forkscount: {props.forkscount}</StyledText>
+        <StyledText>ReviewCount: {props.reviewCount}</StyledText>
+        </View>
+    )
+}
 
 
 const RepositoryItem = (props) => (
    <View key={props.id} style={styles.container}>
-    <StyledText fontSizes='subheading' fontWeigth='bold'>{props.FullName}</StyledText>
+    <StyledText fontSizes='subheading' fontWeight='bold'>{props.FullName}</StyledText>
     <StyledText>{props.description}</StyledText>
+    <StyledText>{props.languaje}</StyledText>
     <StyledText>{props.ownerAvatarUrl}</StyledText>
-    <StyledText>ReviewCount: {props.reviewCount}</StyledText>
-    <StyledText>Forkscount: {props.forkscount}</StyledText>
-    <StyledText>ReviewCount: {props.reviewCount}</StyledText>
+     <RepositoryStats {...props}/>
     </View>
 
 )

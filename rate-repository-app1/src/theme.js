@@ -11,7 +11,7 @@
   fonts : {
     main : 'System',
    },
-   fontWeights: {
+   fontWeight: {
     normal : '400' , 
     bold : '700' ,
   }

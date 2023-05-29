@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     text:{
         fontSize:theme.fontSizes.body ,  
         color: theme.colors.textPrimary,
-        fontfamily : theme.fonts.main ,
-        fontWeight : theme.fontWeights.normal , 
+        fontFamily : theme.fonts.main ,
+        fontWeight : theme.fontWeight.normal , 
 
     },
     colorPrimary: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         color : theme.colors.textSecondary
     },
      bold: {
-        fontWeight: theme.fontWeights.bold
+        fontWeight: theme.fontWeight.bold
     },
     subheading: {
         fontSize:theme.fontSizes.subheading
@@ -26,13 +26,13 @@ const styles = StyleSheet.create({
 })
 
 
-export default function StyledText ({children , color, fontSize, fontWeight,style,...restOfProps }) {
+export default function StyledText ({children , color, fontSize,fontWeight,style,...restOfProps }) {
   
     const textStyle = [
         styles.text,
-        color === 'primary'  && style.colorPrimary ,
-        color === 'secondary' && style.colorSecondary , 
-        fontSize === "subheading" && style.subheading , 
+        color === 'primary'  && styles.colorPrimary ,
+        color === 'secondary' && styles.colorSecondary , 
+        fontSize === "subheading" && styles.subheading , 
         fontWeight === "bold" && styles.bold , 
         
      ] ; 
